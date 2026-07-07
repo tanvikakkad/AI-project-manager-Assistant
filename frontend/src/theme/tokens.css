@@ -1,0 +1,112 @@
+/* Design tokens shared by every component via CSS Modules — the only place
+   raw color/spacing values are allowed to live on the frontend.
+
+   Palette: one primary accent (blue) + neutrals for chrome; priority/status
+   badges use a small set of muted, consistent-tone accents (not a "colorful
+   dashboard") — see Badge.module.css. */
+:root {
+  --color-page-bg: #f4f5f7;
+  --color-bg: #ffffff;
+  --color-surface: #f8f9fb;
+  --color-surface-hover: #eef0f4;
+  --color-border: #e2e5ea;
+  --color-border-strong: #cbd2db;
+  --color-text: #1a1d23;
+  --color-text-muted: #6b7280;
+  --color-text-subtle: #9aa3af;
+
+  --color-primary: #2563eb;
+  --color-primary-hover: #1d4ed8;
+  --color-primary-active: #1e40af;
+  --color-primary-soft: rgba(37, 99, 235, 0.08);
+  --color-primary-contrast: #ffffff;
+
+  --color-danger: #dc2626;
+  --color-danger-hover: #b91c1c;
+  --color-success: #16a34a;
+
+  --color-priority-low: #6b7280;
+  --color-priority-medium: #2563eb;
+  --color-priority-high: #c2620a;
+  --color-priority-urgent: #dc2626;
+
+  --color-status-todo: #6b7280;
+  --color-status-in-progress: #2563eb;
+  --color-status-done: #16a34a;
+
+  --space-2xs: 2px;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-full: 999px;
+
+  --font-sans:
+    "Inter",
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.8125rem;
+  --font-size-md: 0.9375rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 1.875rem;
+
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.1);
+  --shadow-focus: 0 0 0 3px var(--color-primary-soft);
+
+  --transition-fast: 0.12s ease;
+  --transition-base: 0.18s ease;
+
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-page-bg: #0e1013;
+    --color-bg: #16181d;
+    --color-surface: #1c1f26;
+    --color-surface-hover: #262a33;
+    --color-border: #2c3038;
+    --color-border-strong: #3a3f4a;
+    --color-text: #e7e9ee;
+    --color-text-muted: #9aa1ac;
+    --color-text-subtle: #6f7681;
+
+    --color-primary: #5b9dff;
+    --color-primary-hover: #7bb0ff;
+    --color-primary-active: #3d7ee0;
+    --color-primary-soft: rgba(91, 157, 255, 0.14);
+    --color-primary-contrast: #0b1220;
+
+    --color-danger: #f87171;
+    --color-danger-hover: #fb9d9d;
+    --color-success: #4ade80;
+
+    --color-priority-low: #9aa1ac;
+    --color-priority-medium: #5b9dff;
+    --color-priority-high: #fb923c;
+    --color-priority-urgent: #f87171;
+
+    --color-status-todo: #9aa1ac;
+    --color-status-in-progress: #5b9dff;
+    --color-status-done: #4ade80;
+
+    --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+    --shadow-md: 0 8px 28px rgba(0, 0, 0, 0.5);
+    --shadow-focus: 0 0 0 3px var(--color-primary-soft);
+  }
+}
